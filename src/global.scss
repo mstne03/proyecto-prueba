@@ -1,3 +1,6 @@
+// Rajdhani — Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 /*
  * App Global CSS
  * ----------------------------------------------------------------------------
@@ -32,6 +35,7 @@
  * https://ionicframework.com/docs/theming/dark-mode
  */
 
-/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+// App siempre en modo oscuro (CS2 market no tiene modo claro)
+@import "@ionic/angular/css/palettes/dark.always.css";
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+/* @import '@ionic/angular/css/palettes/dark.system.css'; */

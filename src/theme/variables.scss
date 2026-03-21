@@ -1,7 +1,110 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
-$color-primary: rgba(250, 0, 246, 0.5);
-$color-secondary: rgb(0, 48, 100);
-$accent-color: rgb(45, 191, 172);
-$background-color: rgb(41, 40, 41);
-$surface-color: rgb(41, 40, 41, 0.50);
+// CS2 Market — Design Tokens
+// Ionic theming reference: https://ionicframework.com/docs/theming/color-generator
+
+:root {
+
+  // ── Typography ─────────────────────────────────────────────────────────────
+  --ion-font-family: 'Rajdhani', sans-serif;
+
+  // ── Primary — electric blue (CTAs, links, active states) ──────────────────
+  --ion-color-primary:              #4b82f5;
+  --ion-color-primary-rgb:          75, 130, 245;
+  --ion-color-primary-contrast:     #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade:        #3a6fd8;
+  --ion-color-primary-tint:         #6095f7;
+
+  // ── Secondary — dark navy (superficies, cards) ─────────────────────────────
+  --ion-color-secondary:              #1c2033;
+  --ion-color-secondary-rgb:          28, 32, 51;
+  --ion-color-secondary-contrast:     #e8eaf0;
+  --ion-color-secondary-contrast-rgb: 232, 234, 240;
+  --ion-color-secondary-shade:        #151826;
+  --ion-color-secondary-tint:         #252947;
+
+  // ── Tertiary — gold (items premium, destacados) ────────────────────────────
+  --ion-color-tertiary:              #c9922a;
+  --ion-color-tertiary-rgb:          201, 146, 42;
+  --ion-color-tertiary-contrast:     #000000;
+  --ion-color-tertiary-contrast-rgb: 0, 0, 0;
+  --ion-color-tertiary-shade:        #b07f24;
+  --ion-color-tertiary-tint:         #d4a040;
+
+  // ── Success ────────────────────────────────────────────────────────────────
+  --ion-color-success:              #2ecc71;
+  --ion-color-success-rgb:          46, 204, 113;
+  --ion-color-success-contrast:     #000000;
+  --ion-color-success-contrast-rgb: 0, 0, 0;
+  --ion-color-success-shade:        #28b463;
+  --ion-color-success-tint:         #43d17e;
+
+  // ── Warning ────────────────────────────────────────────────────────────────
+  --ion-color-warning:              #f0a500;
+  --ion-color-warning-rgb:          240, 165, 0;
+  --ion-color-warning-contrast:     #000000;
+  --ion-color-warning-contrast-rgb: 0, 0, 0;
+  --ion-color-warning-shade:        #d49200;
+  --ion-color-warning-tint:         #f2ae1a;
+
+  // ── Danger ─────────────────────────────────────────────────────────────────
+  --ion-color-danger:              #eb4b4b;
+  --ion-color-danger-rgb:          235, 75, 75;
+  --ion-color-danger-contrast:     #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade:        #cf4242;
+  --ion-color-danger-tint:         #ed5d5d;
+
+  // ── Dark ───────────────────────────────────────────────────────────────────
+  --ion-color-dark:              #0b0d14;
+  --ion-color-dark-rgb:          11, 13, 20;
+  --ion-color-dark-contrast:     #e8eaf0;
+  --ion-color-dark-contrast-rgb: 232, 234, 240;
+  --ion-color-dark-shade:        #090b11;
+  --ion-color-dark-tint:         #23252c;
+
+  // ── Medium ─────────────────────────────────────────────────────────────────
+  --ion-color-medium:              #4a4f63;
+  --ion-color-medium-rgb:          74, 79, 99;
+  --ion-color-medium-contrast:     #e8eaf0;
+  --ion-color-medium-contrast-rgb: 232, 234, 240;
+  --ion-color-medium-shade:        #414657;
+  --ion-color-medium-tint:         #5c6173;
+
+  // ── Light ──────────────────────────────────────────────────────────────────
+  --ion-color-light:              #e8eaf0;
+  --ion-color-light-rgb:          232, 234, 240;
+  --ion-color-light-contrast:     #0b0d14;
+  --ion-color-light-contrast-rgb: 11, 13, 20;
+  --ion-color-light-shade:        #cdd0d8;
+  --ion-color-light-tint:         #eaecf2;
+
+  // ── Fondos y superficies ───────────────────────────────────────────────────
+  --ion-background-color:     #0b0d14; // fondo base de la app
+  --ion-background-color-rgb: 11, 13, 20;
+  --ion-card-background:      #13161f; // cards, modales
+  --ion-item-background:      #13161f;
+  --ion-toolbar-background:   #0e1119; // header / navbar
+  --ion-tab-bar-background:   #0e1119; // tab bar inferior
+  --ion-popover-background:   #1a1e2a;
+
+  // ── Texto ──────────────────────────────────────────────────────────────────
+  --ion-text-color:         #e8eaf0;
+  --ion-text-color-rgb:     232, 234, 240;
+  --ion-text-color-step-50:  #dcdee8;
+  --ion-text-color-step-100: #d0d3e0;
+  --ion-text-color-step-150: #c4c8d8;
+  --ion-text-color-step-200: #b8bcd0;
+  --ion-text-color-step-250: #8b90a0; // texto secundario / subtítulos
+  --ion-text-color-step-500: #4a4f63; // texto muted / placeholders
+  --ion-text-color-step-900: #1a1e2a;
+
+  // ── CS2 Raridades ──────────────────────────────────────────────────────────
+  --rarity-consumer:      #b0c3d9; // Consumer Grade    — blanco/gris
+  --rarity-industrial:    #5e98d9; // Industrial Grade  — azul claro
+  --rarity-milspec:       #4b69ff; // Mil-Spec Grade    — azul
+  --rarity-restricted:    #8847ff; // Restricted        — morado
+  --rarity-classified:    #d32ce6; // Classified        — rosa/fucsia
+  --rarity-covert:        #eb4b4b; // Covert            — rojo
+  --rarity-contraband:    #e4ae39; // Contraband        — dorado (cuchillos)
+  --rarity-extraordinary: #ffd700; // Extraordinary     — dorado brillante (guantes)
+}
