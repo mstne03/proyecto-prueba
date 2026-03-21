@@ -1,0 +1,64 @@
+// ─── Layout shell ────────────────────────────────────────────────────────────
+// Full-viewport container; Ionic pages scroll inside it.
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+  font-family: var(--ion-font-family);
+}
+
+// ─── Tab bar ─────────────────────────────────────────────────────────────────
+
+ion-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+ion-tab-bar {
+  --background: transparent;
+  --border: none;
+
+  height: 80px;
+  padding: 10px 20px;
+
+  // Floating pill — positioned above the bottom edge
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  border-radius: 60px;
+
+  // Glassmorphism: semi-transparent dark surface + blur
+  background: rgba(11, 13, 20, 0.55) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  // Subtle border glow
+  border: 1px solid rgba(var(--ion-color-primary-rgb), 0.18) !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6),
+              0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+ion-tab-button {
+  --background: transparent;
+  --color:          var(--ion-text-color-step-500);
+  --color-selected: var(--ion-color-primary);
+
+  height: 75px;
+  width: 75px;
+
+  border-radius: 16px;
+}
+
+// ─── Page content area ───────────────────────────────────────────────────────
+
+ion-content {
+  --background: var(--ion-background-color);
+  --padding-start: 0;
+  --padding-end:   0;
+}
