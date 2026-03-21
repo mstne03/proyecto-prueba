@@ -4,15 +4,42 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Commands
 
+Los scripts npm delegan en Angular CLI (`ng`), que está en `devDependencies`. El Ionic CLI (`ionic`) es una herramienta global que delega a su vez en `ng` para proyectos Angular — ambas vías producen el mismo resultado.
+
 ```bash
-npm start          # Development server
-npm run build      # Production build (output: www/)
-npm run watch      # Watch mode build
-npm test           # Run tests (Karma + Jasmine, Chrome)
-npm run lint       # ESLint on .ts and .html files
+npm start                   # Servidor de desarrollo → ng serve
+npm run build               # Build de producción (output: www/)
+npm run watch               # Build en modo watch (desarrollo)
+npm test                    # Tests con Karma + Jasmine (Chrome)
+npm run lint                # ESLint sobre .ts y .html
 ```
 
-Run a single test file by passing `--include` to the test runner:
+Equivalentes con Angular CLI directamente:
+```bash
+npx ng serve
+npx ng build
+npx ng test
+npx ng lint
+npx ng generate component|page|service|pipe|directive ...
+```
+
+Equivalentes con Ionic CLI (requiere instalación global: `npm install -g @ionic/cli`):
+```bash
+ionic serve                 # Igual que npm start
+ionic build                 # Igual que npm run build
+ionic generate page <name>  # Genera página con estructura Ionic (page.ts, .html, .scss, .spec.ts)
+ionic generate component <name>
+ionic capacitor add android|ios   # Añadir plataforma nativa
+ionic capacitor run android|ios   # Ejecutar en dispositivo/emulador
+```
+
+Generar una página nueva (recomendado usar Ionic CLI para respetar la estructura del proyecto):
+```bash
+ionic generate page features/my-feature
+# Crea: src/app/features/my-feature/my-feature.page.ts|html|scss|spec.ts
+```
+
+Ejecutar un único test:
 ```bash
 npx ng test --include='src/app/home/home.page.spec.ts'
 ```
