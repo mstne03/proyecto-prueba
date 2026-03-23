@@ -23,18 +23,11 @@ ion-tab-bar {
   --background: transparent;
   --border: none;
 
-  height: 80px;
-  padding: 10px 20px;
-
-  // Floating pill — positioned above the bottom edge
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  border-radius: 60px;
+  height: 50px;
+  padding: 10px 10px;
 
   // Glassmorphism: semi-transparent dark surface + blur
-  background: rgba(11, 13, 20, 0.55) !important;
+  background: rgba(15, 23, 42, 0.55) !important;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 
